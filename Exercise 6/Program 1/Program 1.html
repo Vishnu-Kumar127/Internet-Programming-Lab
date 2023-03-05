@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Input Field Example</title>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script>
+    $(document).ready(function() {
+      $("#submitBtn").click(function() {
+        var inputValue = $("#inputField").val();
+        if (inputValue === "") {
+          $("#errorMessage").text("Error: Please enter a value");
+          $("#output").text("");
+        } 
+        else {
+          $("#output").text("Input value: " + inputValue);
+          $("#errorMessage").text("");
+        }
+      });
+    });
+  </script>
+</head>
+<body>
+  <label for="inputField">Input:</label>
+  <input type="text" id="inputField">
+  <br><br>
+  <button id="submitBtn">Submit</button>
+  <br><br>
+  <div id="output"></div>
+  <div id="errorMessage" style="color: red;"></div>
+</body>
+</html>

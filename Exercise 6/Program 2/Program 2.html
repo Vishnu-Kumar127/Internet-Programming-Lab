@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Input Field Example</title>
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+	<script>
+	$(document).ready(function() {
+
+  $("#countWordsButton").click(function() {
+    var input = $("#inputField").val();
+    if (input == "") {
+      $("#error").text("Error: Input field is empty.");
+      $("#result").text("");
+    }
+    else
+    {
+      var wordCount = input.split(" ").length;
+      $("#result").text("Word count: " + wordCount);
+      $("#error").text("");
+    }
+  });
+
+});
+
+	</script>
+</head>
+<body>
+  <label for="inputField">Input:</label>
+	<input type="text" id="inputField" >
+  <br><br>
+  <button id="countWordsButton">Count Words</button>
+  <br><br>
+  <div id="result"></div>
+  <div id="error" style="color: red;"></div>
+</body>
+</html>
+
+
+
+
+
+
