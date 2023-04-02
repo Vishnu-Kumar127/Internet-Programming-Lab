@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<?php include 'form.php'; ?>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Car Registration Form</title>
+	<style>
+		#sp
+		{
+			width: 400px;
+			height: 200px;
+
+		}
+		.se label
+		{
+			margin-bottom: 15px;
+		}
+		.fo
+		{
+			display: inline-block;
+			width: 150px;
+			text-align: right;
+		}
+		#sele,#sele1,#sele2,#sele3,#sele4
+		{
+			color: green;
+		}
+	</style>
+</head>
+<body>
+	<form method="post" action="form.php">
+		<div>What of car would u like to buy?</div>
+		<input type="radio" name="cars" value="Proton" id="Proton" >
+		<label for = "Proton">Proton</label>
+		<input type="radio" name="cars" value="Honda" id="Honda">
+		<label for = "Honda">Honda</label>
+		<input type="radio" name="cars" value="ferri" id="ferri">
+		<label for = "ferri">ferri</label>
+		<input type="radio" name="cars" value="ford" id="ford">
+		<label for = "ford">ford </label>
+		
+		<br><br>
+
+		<div>What colour do u want on Your Car?</div>
+		<table>
+		<select name="car" id="cars">
+			<option value="Select">---Select---</option>
+			<option value="pink">Pink</option>
+			<option value="Red">Red</option>
+			<option value="violet">Violet</option>
+			<option value="Blue">Blue</option>
+			<option value="Black">Black</option>
+
+		</select>
+		</table>
+			<span>Others:</span>&nbsp;&nbsp;
+			<input type="text" name="other">
+			<span id="sele1"></span>
+		<br><br>
+
+		<div>Enter other Specification of Your Preferred Car:</div>
+		<input type="text" name="Specification" id="sp" minlength="10" maxlength="15" >
+		<br><br>
+
+		<div>Tell Us How To Get In Touch with You</div>
+		<br>
+			<div class ="se">
+			<label class="fo">Name:</label>
+			<input type="text" name="name" id="10" >
+			<span id="sele2"></span>
+			</div>
+			<div class ="se">
+			<label class="fo">Telephone:</label>
+			<input type="Number" name="no" id="11" >
+			<span id="sele3"></span>
+			</div>
+			<div class ="se">
+			<label class="fo">Email Id:</label>
+			<input type="text" name="email" id="12" >
+			<span id="sele4"></span>
+			</div>
+		
+		<br>
+		<div><input type="checkbox">Please contact me as soon as possible</div>
+		<br>
+		<div>My Mail:<a href="https://mail.google.com/mail/u/0/?tab=rm&ogbl#inbox" target="blank">mjvishnukumar2003@gmail.com</a></div>
+		<br><br>
+			<span><button type="submit">Submit</button>&nbsp;&nbsp;&nbsp;<button id="clear">Clear</button></span>
+		<br><br><div>
+		<a href="https://mail.google.com/mail/u/0/?tab=rm&ogbl#inbox">Back to mail page</a></div>
+	</form>
+        
+</body>
+</html>
