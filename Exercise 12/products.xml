@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<products>
+    <product>
+        <name>BMW</name>
+        <description>This is one of the Bike appeared in Avenger 2</description>
+        <price>$100000</price>
+        <image>product1.jpg</image>
+    </product>
+    <product>
+        <name>Boxer</name>
+        <description>It was first manufactured by TVS.</description>
+        <price>$80000</price>
+        <image>product2.jpg</image>
+    </product>
+    <product>
+        <name>Royal Enfield</name>
+        <description>It is made using Heavy metals.</description>
+        <price>$1000000</price>
+        <image>product3.jpg</image>
+    </product>
+    <product>
+        <name>Insperion</name>
+        <description>This Laptop is handled by G Eswar.</description>
+        <price>$150000</price>
+        <image>product4.jpg</image>
+    </product>
+</products>
