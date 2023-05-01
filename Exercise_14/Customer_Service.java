@@ -11,7 +11,6 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 import javax.jws.WebService;
 import javax.jws.WebMethod;
@@ -25,10 +24,10 @@ import javax.jws.WebParam;
 public class Customer_Service {
 
     @WebMethod(operationName = "Update_Phone")
-    public List<Customer> Update_Phone(@WebParam(name = "id") int id,@WebParam(name = "Phone") String phone) 
+    public String Update_Phone(@WebParam(name = "id") int id,@WebParam(name = "Phone") String phone) 
     {
         List<Customer> customers = new ArrayList<>();
-        String result="";
+       
         try
         {
             Connection c=DriverManager.getConnection("jdbc:derby://localhost:1527/customer");
@@ -45,13 +44,12 @@ public class Customer_Service {
             String Phone = rs.getString(5);
             Customer customer = new Customer(c_id, f_name,l_name, email, Phone);
             customers.add(customer);
-            result+="id="+c_id+" First Name="+f_name+" Last Name="+l_name+" Email="+email+" Phone="+Phone+"\t";
          }   
         } 
         catch (SQLException ex) {}
         
         
-        return customers; 
+        return customers.toString(); 
     }
 
     /**
@@ -61,7 +59,7 @@ public class Customer_Service {
      * @return 
      */
     @WebMethod(operationName = "Update_Email")
-    public List<Customer> Update_Email(@WebParam(name = "id") int id, @WebParam(name = "Email") String Email) {
+    public String Update_Email(@WebParam(name = "id") int id, @WebParam(name = "Email") String Email) {
         //TODO write your implementation code here:
         List<Customer> customers = new ArrayList<>();
         
@@ -87,7 +85,7 @@ public class Customer_Service {
         
         catch (SQLException ex) {}
         
-        return customers ;
+        return customers.toString() ;
     }
 
    

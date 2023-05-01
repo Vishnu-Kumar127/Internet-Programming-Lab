@@ -17,7 +17,8 @@ class Customer
     private String email;
     private String phone;
 
-    public Customer(int id, String f_name, String l_name, String email, String phone) {
+    public Customer(int id, String f_name, String l_name, String email, String phone) 
+    {
         this.id = id;
         this.f_name = f_name;
         this.l_name = l_name;
@@ -25,7 +26,6 @@ class Customer
         this.phone = phone;
     }
 
-    // Getters and setters for each field
     public int getId() {
         return id;
     }
@@ -64,5 +64,10 @@ class Customer
 
     public void setPhone(String phone) {
         this.phone = phone;
+    }
+   @Override
+    public String toString()
+    {
+        return "\nId:"+id+" Name:"+f_name+" "+l_name+" Email:"+email+" Mobile Number:"+phone+" ";
     }
 }

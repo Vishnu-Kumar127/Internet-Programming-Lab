@@ -5,8 +5,6 @@
  */
 package Exercise_14;
 
-import Exercise_14.Customer;
-import Exercise_14.Customer_Service;
 import java.util.*;
 
 /**
@@ -44,16 +42,12 @@ public class Cilent {
 
     private static void c_phone(int id, String phone) {
         Customer_Service service = new Customer_Service();
-        List<Customer> customers = service.Update_Phone(id, phone);
-        for (Customer customer : customers) {
-            System.out.println(customer.getF_name() + " " + customer.getL_name() + ": " + customer.getPhone()+" AND "+customer.getEmail());
-        }
+        String customers = service.Update_Phone(id, phone);
+        System.out.println(customers);
     }
     private static void c_email(int id, String email) {
         Customer_Service service = new Customer_Service();
-        List<Customer> customers = service.Update_Email(id, email);
-        for (Customer customer : customers) {
-            System.out.println(customer.getF_name() + " " + customer.getL_name() + ": " + customer.getPhone()+" AND "+customer.getEmail());
-        }
+        String customers = service.Update_Email(id, email);
+        System.out.println(customers);
     }
 }
